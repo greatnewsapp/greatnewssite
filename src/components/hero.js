@@ -19,17 +19,18 @@ const Header = ({ siteTitle }) => (
       style={{
         backgroundImage: `url(${headerImage})`,
         position: "absolute",
+        "object-fit": "contain",
         top: 0,
         zIndex: -5,
         height: "100vh",
         width: "100vw",
-        opacity: 0.5,
+        opacity: 0.4,
       }}
     />
-    <h1 style={{ textAlign: "center" }}>Landing Page Starter</h1>
+    <h1 style={{ textAlign: "center" }}>GREAT NEWS APP</h1>
     <p style={{ textAlign: "center", maxWidth: 440 }}>
-      This landing page looks great on all devices and is minimal in design. Add
-      what you want and deploy.
+      News that you want and 
+      not what the publishers &amp; producers want to show. 
     </p>
     <Button>Get Early Access</Button>
     <div style={{ margin: 60, width: `250px`, position: "relative" }}>
@@ -45,7 +46,7 @@ const Header = ({ siteTitle }) => (
       >
         <img
           src={mockupFrame}
-          alt="outlines of shapes and confetti in the background "
+          alt="outlines of app and map in the background "
         />
       </div>
     </div>

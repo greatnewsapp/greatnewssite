@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Starter Landing Page`,
-    description: `A barebone landing page starter with some minimal styles.`,
+    title: `Great News App`,
+    description: `A direct way to get real news.`,
     author: `@gillkyle`,
-    siteUrl: `https://gatsby-starter-landing-page.netlify.com`,
+    siteUrl: `https://greatnewsapp.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

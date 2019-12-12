@@ -7,8 +7,8 @@ import { COLORS } from "../styles/constants"
 const Content = () => (
   <div style={{ padding: "4rem 1rem", textAlign: "center" }}>
     <SectionHeader
-      title="Minimal Features"
-      description="Don't spend time ripping out unneeded plugins and bloat."
+      title="Direct to you News"
+      description="Go beyond traffic, or restaurants and get real news on the map."
     />
     <content
       style={{
@@ -19,10 +19,9 @@ const Content = () => (
       }}
     >
       <div>
-        <h3>What you need to Start</h3>
+        <h3>News on Demand</h3>
         <p style={{ color: COLORS.gray }}>
-          Includes plugins for analytics, building sitemaps, and optimizing
-          images
+          Traveling to a new place? Point location on the map and ask for coverage
         </p>
       </div>
       <div>
