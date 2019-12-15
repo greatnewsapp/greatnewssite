@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Button from "../components/button"
+import EmailSubscription from "../components/email-subscription"
 import headerImage from "../images/header.png"
 import MockupContent from "./image"
 import mockupFrame from "../images/mockup-frame.png"
@@ -32,7 +33,11 @@ const Header = ({ siteTitle }) => (
       News that you want and 
       not what the publishers &amp; producers want to show. 
     </p>
-    <Button>Get Early Access</Button>
+    <EmailSubscription
+      title="Get Early Access"
+      placeholder="Enter your email Id"
+    />
+    {/* <Button>Get Early Access</Button> */}
     <div style={{ margin: 60, width: `250px`, position: "relative" }}>
       <div style={{ clipPath: "inset(2% 5% round 2% 5%)" }}>
         <MockupContent />
