@@ -5,23 +5,33 @@ import "../styles/button.css"
 import SectionHeader from "./section-header"
 import { useAsync } from "react-async"
 // import { postData } from "./postData";
+import axios from 'axios';
 
 const subscribeEmail = async (email) => {
-    let emailData = {"email": email};
-    let response = await fetch('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: emailData // body data type must match "Content-Type" header
-    });
-    if (response.ok) {
-        let data = await response.json()
-        return data;    
-    } else {
-        return "error"
-    }    
+    let emailData = {email: email};
+    // let response = await fetch('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Accept': 'application/json',
+    //         'Content-Type': 'application/json; charset=utf-8'
+    //     },
+    //     body: emailData // body data type must match "Content-Type" header
+    // });
+    // if (response.ok) {
+    //     let data = await response.json()
+    //     return data;    
+    // } else {
+    //     return "error"
+    // } 
+    
+    
+    try {
+        const response = await axios.post('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', { "email": email });
+        console.log('👉 Returned data:', response);
+      } catch (e) {
+        console.log(`😱 Axios request failed: ${e}`);
+      }
+      
 }
 
 class EmailSubscription extends Component {
