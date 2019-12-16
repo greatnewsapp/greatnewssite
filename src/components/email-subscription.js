@@ -4,7 +4,25 @@ import React, { Component } from "react"
 import "../styles/button.css"
 import SectionHeader from "./section-header"
 import { useAsync } from "react-async"
-import { postData } from "./postData";
+// import { postData } from "./postData";
+
+const subscribeEmail = async (email) => {
+    let emailData = {"email": email};
+    let response = await fetch('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: emailData // body data type must match "Content-Type" header
+    });
+    if (response.ok) {
+        let data = await response.json()
+        return data;    
+    } else {
+        return "error"
+    }    
+}
 
 class EmailSubscription extends Component {
     constructor(props) {
@@ -15,13 +33,19 @@ class EmailSubscription extends Component {
         event.preventDefault()
         let email = this.inputNode.value
         console.log(email)
-        this.inputNode.value = "";
-        try {
-            const data = postData('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', { "email": email });
-            console.log(JSON.stringify(data)); // JSON-string from `response.json()` call
-          } catch (error) {
-            console.error(error);
-          }          
+        this.inputNode.value = "";``
+
+        // $.post('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', 
+        // {'email': email}, 
+        // function (data, status) {
+        //     console.log(`data ${data} | ${JSON.stringify(data)} | status ${status}`);
+        // })
+
+        subscribeEmail(email).then((data) => {
+            console.log(`handleSubmit data ${data} | ${JSON.stringify(data)}`);
+        }).catch((error) => {
+            console.log(`handleSubmit error ${error}`);
+        });
     }
 
     render() {
