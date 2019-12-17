@@ -9,7 +9,7 @@ const CallToAction = () => (
       title="Limited Preview"
       description="Join the invite list to be first to receive great news!"
     />
-    <Button>Get Early Access</Button>
+    <Button>Join our Whatsapp group</Button>
   </div>
 )
 

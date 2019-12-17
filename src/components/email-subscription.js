@@ -8,7 +8,7 @@ import { useAsync } from "react-async"
 import axios from 'axios';
 
 const subscribeEmail = async (email) => {
-    let emailData = {"email": email};
+    let emailData = {email: email};
     let header = new Headers({
         'Access-Control-Allow-Origin':'*',
         'Content-Type': 'application/json'
@@ -49,7 +49,7 @@ const subscribeEmail = async (email) => {
             .then(response => response.json())
             .then(responseText => {
                 let resp = typeof responseText === 'string' ? JSON.parse(responseText) : responseText;
-                console.log(`subscribeEmail | resp ${resp} | ${JSON.stringify(responseText)} | ${typeof(responseText)} | ${typeof(resp)}`);
+                console.log(`subscribeEmail | resp ${resp} | ${JSON.stringify(responseText).length} | ${JSON.stringify(responseText)} | ${typeof(resp)}`);
                 reslove(resp);
             }).catch(err => {
                 console.log(`subscribeEmail | err ${err}`);
