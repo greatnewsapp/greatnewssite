@@ -9,38 +9,47 @@ import axios from 'axios';
 
 const subscribeEmail = async (email) => {
     let emailData = {"email": email};
-    // let response = await fetch('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Accept': 'application/json',
-    //         'Content-Type': 'application/json',
-    //         'Access-Control-Allow-Origin': '*'
-    //     },
-    //     body: emailData // body data type must match "Content-Type" header
-    // });
-    // if (response.ok) {
-    //     let data = await response.json()
-    //     return data;    
-    // } else {
-    //     return "error"
-    // } 
-    
     let header = new Headers({
         'Access-Control-Allow-Origin':'*',
         'Content-Type': 'application/json'
     });
+
+    // let response = await fetch('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', {
+    //     method: 'POST',
+    //     mode: 'cors',
+    //     header: header,
+    //     body: emailData // body data type must match "Content-Type" header
+    // });
+    // if (response.ok) {
+    //     let data = await response.json()
+    //     console.log(`subscribeEmail data ${response} | ${data + ''} | ${JSON.stringify(data).length}`);
+    //     return data;    
+    // } else {
+    //     return "error"
+    // } 
+
     let sentData = {
         method:'POST',
         mode: 'cors',
         header: header,
         body: emailData
     };
-    return new Promise((reslove,reject)=>{
+
+    // fetch('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', sentData)
+    // .then(response => {
+    //     console.log(response);
+    //     response.json().then((data) => {
+    //         console.log(data);
+    //     });
+    // });
+
+    
+    return new Promise((reslove,reject) => {
         fetch('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', sentData)
             .then(response => response.json())
-            .then(responseText=>{
+            .then(responseText => {
                 let resp = typeof responseText === 'string' ? JSON.parse(responseText) : responseText;
-                console.log(`subscribeEmail | resp ${resp}`);
+                console.log(`subscribeEmail | resp ${resp} | ${JSON.stringify(responseText)} | ${typeof(responseText)} | ${typeof(resp)}`);
                 reslove(resp);
             }).catch(err => {
                 console.log(`subscribeEmail | err ${err}`);
@@ -48,7 +57,7 @@ const subscribeEmail = async (email) => {
             });
     }).catch(err => {
         console.log(`subscribeEmail | err ${err}`);
-        reject(err);
+        // reject(err);
     });
           
 }
@@ -71,9 +80,9 @@ class EmailSubscription extends Component {
         // })
 
         subscribeEmail(email).then((data) => {
-            console.log(`handleSubmit data ${data} | ${JSON.stringify(data)}`);
+            console.log(`handleSubmit data 1 ${data} | | ${JSON.stringify(data)}`);
         }).catch((error) => {
-            console.log(`handleSubmit error ${error}`);
+            console.log(`handleSubmit error 1 ${error}`);
         });
     }
 
