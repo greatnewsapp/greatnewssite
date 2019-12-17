@@ -4,6 +4,7 @@
   "description": "A simple starter to create a minimal landing page with Gatsby",
   "version": "0.1.0",
   "author": "Kyle Gill <kyle.robert.gill@gmail.com>",
+  "proxy": "https://us-central1-great-news-app.cloudfunctions.net",
   "dependencies": {
     "async": "^3.1.0",
     "axios": "^0.19.0",

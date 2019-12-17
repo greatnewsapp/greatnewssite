@@ -13,7 +13,8 @@ const subscribeEmail = async (email) => {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
         },
         body: emailData // body data type must match "Content-Type" header
     });
