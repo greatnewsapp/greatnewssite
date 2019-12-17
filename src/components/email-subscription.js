@@ -1,6 +1,4 @@
 import React, { Component } from "react"
-
-// import { COLORS, BORDER_RADIUS, GRADIENT } from "../styles/constants"
 import "../styles/button.css"
 import SectionHeader from "./section-header"
 import { useAsync } from "react-async"
@@ -14,20 +12,6 @@ const subscribeEmail = async (email) => {
         'Content-Type': 'application/json'
     });
 
-    // let response = await fetch('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', {
-    //     method: 'POST',
-    //     mode: 'cors',
-    //     header: header,
-    //     body: emailData // body data type must match "Content-Type" header
-    // });
-    // if (response.ok) {
-    //     let data = await response.json()
-    //     console.log(`subscribeEmail data ${response} | ${data + ''} | ${JSON.stringify(data).length}`);
-    //     return data;    
-    // } else {
-    //     return "error"
-    // } 
-
     let sentData = {
         method:'POST',
         mode: 'cors',
@@ -35,15 +19,6 @@ const subscribeEmail = async (email) => {
         body: emailData
     };
 
-    // fetch('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', sentData)
-    // .then(response => {
-    //     console.log(response);
-    //     response.json().then((data) => {
-    //         console.log(data);
-    //     });
-    // });
-
-    
     return new Promise((reslove,reject) => {
         fetch('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', sentData)
             .then(response => response.json())
@@ -72,12 +47,6 @@ class EmailSubscription extends Component {
         let email = this.inputNode.value
         console.log(email)
         this.inputNode.value = "";
-
-        // $.post('https://us-central1-great-news-app.cloudfunctions.net/pushSubscribedEmail', 
-        // {'email': email}, 
-        // function (data, status) {
-        //     console.log(`data ${data} | ${JSON.stringify(data)} | status ${status}`);
-        // })
 
         subscribeEmail(email).then((data) => {
             console.log(`handleSubmit data 1 ${data} | | ${JSON.stringify(data)}`);

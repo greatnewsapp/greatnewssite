@@ -9,7 +9,6 @@ export async function postData(url, data) {
         credentials: 'same-origin',
         headers: {
             'Content-Type': 'application/json'
-            // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         redirect: 'follow',
         referrer: 'no-referrer',

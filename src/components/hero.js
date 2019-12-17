@@ -6,6 +6,7 @@ import EmailSubscription from "../components/email-subscription"
 import headerImage from "../images/header.png"
 import MockupContent from "./image"
 import mockupFrame from "../images/mockup-frame.png"
+import SectionHeader from "./section-header"
 
 const Header = ({ siteTitle }) => (
   <div
@@ -33,11 +34,7 @@ const Header = ({ siteTitle }) => (
       News that you want and 
       not what the publishers &amp; producers want to show. 
     </p>
-    <EmailSubscription
-      title="Get Early Access"
-      placeholder="Enter your email Id"
-    />
-    {/* <Button>Get Early Access</Button> */}
+    <Button>Join our Whatsapp group</Button>
     <div style={{ margin: 60, width: `250px`, position: "relative" }}>
       <div style={{ clipPath: "inset(2% 5% round 2% 5%)" }}>
         <MockupContent />
