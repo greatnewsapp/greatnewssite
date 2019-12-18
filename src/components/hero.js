@@ -34,7 +34,7 @@ const Header = ({ siteTitle }) => (
     <p style={{ textAlign: "center", maxWidth: 440 }}>
     Go beyond the noise of TV debates and get the real reactions by real people on the ground. 
     </p>
-    <Button>Be the early member</Button>
+    <Button>Get early access</Button>
     <div style={{ display: "flex", margin: "6px"}}>
       <img style={{width: "32px", height: "32px"}} src={whatsapp}></img>
       <small style={{color: "grey", padding: "3px"}}>Join the Greatnewsapp Whatsapp group.</small>
