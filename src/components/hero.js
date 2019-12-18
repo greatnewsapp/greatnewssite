@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => (
     </p>
     <Button>Be the part of our early core group</Button>
     <div style={{ display: "flex", margin: "6px"}}>
-      <img style={{width: "32px"}} src={whatsapp}></img>
+      <img style={{width: "32px", height: "32px"}} src={whatsapp}></img>
       <small style={{color: "grey", padding: "3px"}}>Join the Greatnewsapp Whatsapp group.</small>
     </div>
     <div style={{ margin: 60, width: `250px`, position: "relative" }}>
