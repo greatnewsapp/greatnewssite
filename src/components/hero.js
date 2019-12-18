@@ -5,6 +5,7 @@ import Button from "../components/button"
 import EmailSubscription from "../components/email-subscription"
 import headerImage from "../images/header.png"
 import MockupContent from "./image"
+import whatsapp from "../images/whatsapp.png"
 import mockupFrame from "../images/mockup-frame.png"
 import SectionHeader from "./section-header"
 
@@ -31,10 +32,13 @@ const Header = ({ siteTitle }) => (
     />
     <h1 style={{ textAlign: "center" }}>GREAT NEWS APP</h1>
     <p style={{ textAlign: "center", maxWidth: 440 }}>
-      News that you want and 
-      not what the publishers &amp; producers want to show. 
+    Go beyond the noise of TV debates and get the real reactions by real people on the ground. 
     </p>
-    <Button>Join our Whatsapp group</Button>
+    <Button>Be the part of our early core group</Button>
+    <div style={{ display: "flex", margin: "6px"}}>
+      <img style={{width: "32px"}} src={whatsapp}></img>
+      <small style={{color: "grey", padding: "3px"}}>Join the Greatnewsapp Whatsapp group.</small>
+    </div>
     <div style={{ margin: 60, width: `250px`, position: "relative" }}>
       <div style={{ clipPath: "inset(2% 5% round 2% 5%)" }}>
         <MockupContent />
