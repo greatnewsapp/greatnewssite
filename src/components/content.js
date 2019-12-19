@@ -26,7 +26,7 @@ const Content = () => (
       </div>
       <div>
         <img src={feature} alt="a blank card floating over colorful graphics" />
-      </div>
+      </div>      
     </content>
   </div>
 )
