@@ -5,7 +5,7 @@ import SectionHeader from "./section-header"
 import whatsapp from "../images/whatsapp.png"
 
 const CallToAction = () => (
-  <div style={{ padding: "4rem 1rem", textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column"}}>
+  <div style={{ padding: "2rem 1rem", textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column"}}>
     <SectionHeader
       title="Limited Preview"
       description="Join the invite list to be first to receive great news!"
