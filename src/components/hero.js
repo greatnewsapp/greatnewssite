@@ -32,9 +32,9 @@ const Header = ({ siteTitle }) => (
     />
     <h1 style={{ textAlign: "center" }}>GREAT NEWS APP</h1>
     <p style={{ textAlign: "center", maxWidth: 440 }}>
-    Go beyond the noise of TV debates and get the real reactions by real people on the ground. 
+    Go beyond the noise of TV debates and get the <strong>real reactions</strong> by <strong>real people</strong> on the ground. 
     </p>
-    <Button>Get early access</Button>
+    <Button>GET EARLY ACCESS</Button>
     <div style={{ display: "flex", margin: "6px"}}>
       <img style={{width: "24px", height: "24px"}} src={whatsapp}></img>
       <small style={{color: "grey", paddingLeft: "3px", fontSize: "15px"}}>Join our Whatsapp group</small>

@@ -10,7 +10,7 @@ const CallToAction = () => (
       title="Limited Preview"
       description="Join the invite list to be first to receive great news!"
     />
-    <Button>Get early access</Button>
+    <Button>GET EARLY ACCESS</Button>
     <div style={{ display: "flex", margin: "6px"}}>
       <img style={{width: "24px", height: "24px"}} src={whatsapp}></img>
       <small style={{color: "grey", paddingLeft: "3px", fontSize: "15px"}}>Join our Whatsapp group</small>
