@@ -4,9 +4,9 @@ import { COLORS } from "../styles/constants"
 
 const SectionHeader = ({ title, description }) => (
   <>
-    <div style={{ padding: "0 0 40px 0" }}>
+    <div style={{ padding: "0 0 100px 0" }}>
       <h2>{title}</h2>
-      <p style={{ color: COLORS.mediumGray }}>{description}</p>
+      <p style={{ color: COLORS.redLighten3 }}>{description}</p>
     </div>
   </>
 )

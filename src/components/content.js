@@ -8,10 +8,12 @@ import { COLORS } from "../styles/constants"
 
 const Content = () => (
   <div style={{ padding: "2rem 1rem", textAlign: "center" }}>
+    
     <SectionHeader
-      title="Views without the filters"
-      description="On Demand & Direct. Want a point of view? Just ask for it."
+      title="Why news on demand?"
+      description="Care for a point of view? Just ask for it."
     />
+
     <content
       style={{
         display: "grid",
