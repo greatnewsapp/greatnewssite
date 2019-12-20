@@ -23,6 +23,7 @@ const Content = () => (
         alignItems: "center",
         justifyContent: "center",
         gridTemplateColumns: "repeat(auto-fit, minmax(240px, 340px))",
+        margin: "0 0 80px 0"
       }}
     >
     
@@ -45,6 +46,7 @@ const Content = () => (
         alignItems: "center",
         justifyContent: "center",
         gridTemplateColumns: "repeat(auto-fit, minmax(240px, 340px))",
+        margin: "0 0 80px 0"
       }}
     >
     
@@ -65,6 +67,7 @@ const Content = () => (
         alignItems: "center",
         justifyContent: "center",
         gridTemplateColumns: "repeat(auto-fit, minmax(240px, 340px))",
+        margin: "0 0 80px 0"
       }}
     >
     
