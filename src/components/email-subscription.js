@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import "../styles/button.css"
 import SectionHeader from "./section-header"
-import { useAsync } from "react-async"
+//  import { useAsync } from "react-async"
 // import { postData } from "./postData";
-import axios from 'axios';
+//  import axios from 'axios';
 
 const subscribeEmail = async (email) => {
     let emailData = {email: email};

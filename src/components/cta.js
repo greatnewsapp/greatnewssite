@@ -12,8 +12,8 @@ const CallToAction = () => (
     />
     <Button>GET EARLY ACCESS</Button>
     <div style={{ display: "flex", margin: "6px"}}>
-      <img style={{width: "24px", height: "24px"}} src={whatsapp}></img>
-      <small style={{color: "grey", paddingLeft: "3px", fontSize: "15px"}}>Join our Whatsapp group</small>
+      <img style={{width: "24px", height: "24px"}} src={whatsapp} alt="whatsapp"></img>
+      <small style={{color: "grey", paddingLeft: "3px", fontSize: "15px"}}>Join our WhatsApp group</small>
     </div>
   </div>
 )

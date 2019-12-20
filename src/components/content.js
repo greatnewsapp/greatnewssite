@@ -10,29 +10,12 @@ const Content = () => (
   <div style={{ padding: "2rem 1rem", textAlign: "center" }}>
     
     <SectionHeader
-      title="Why news on demand?"
-      description="Care for a point of view? Just ask for it."
+      title="NEWS ON DEMAND"
+      description="There are situations when you need information beyond regular channels or forwards. Wish you knew someone there to confirm."
     />
 
-    <content
-      style={{
-        display: "grid",
-        alignItems: "center",
-        justifyContent: "center",
-        gridTemplateColumns: "repeat(auto-fit, minmax(240px, 340px))",
-      }}
-    >
-    
-      <div>
-        <img src={TravellingNews} alt="a blank card floating over colorful graphics" />
-      </div>
-      <div style={{ textAlign: "left"}}>
-        <h3 style={{ color: COLORS.gray }}>Travelling?</h3>
-        <p>
-          Connect with current travellers or locals around the place. Real-time situation report. 
-        </p>
-      </div>      
-    </content>
+    <div style={{ margin: "0 0 80px 0" }}>
+    </div>
 
     <content
       style={{
@@ -44,12 +27,13 @@ const Content = () => (
     >
     
       <div>
-        <img src={OnDemandNews} alt="a blank card floating over colorful graphics" />
+        <img src={OnDemandNews} alt="on demand news by reporter" />
       </div>
       <div style={{ textAlign: "left"}}>
-        <h3 style={{ color: COLORS.gray }}>On Demand</h3>
+        <h3 style={{ color: COLORS.black }}>Your own Reporter</h3>
         <p>
-          Planning an investment. Get a ground reporter on demand for an exclusive report.
+          Point to the location, topic &amp; get  a coverage. Real-estate, investments,
+          sports, politics, events, or anything else..
         </p>
       </div>      
     </content>
@@ -65,16 +49,35 @@ const Content = () => (
     >
     
       <div>
-        <img src={HyperlocalNews} alt="a blank card floating over colorful graphics" />
+        <img src={HyperlocalNews} alt="hyper local news" />
       </div>
       <div style={{ textAlign: "left"}}>
-        <h3 style={{ color: COLORS.gray }}>Go Hyper Local</h3>
+        <h3 style={{ color: COLORS.black }}>Go Hyper Local</h3>
         <p>
-          Read/View latest area news contributed by people. Zoom in news on Maps. Get Notified.
+          There is lot more happening around you apart from weather &amp; traffic. Zoom-in news by location. Get alerts, stay safe.
         </p>
       </div>      
     </content>
 
+    <content
+      style={{
+        display: "grid",
+        alignItems: "center",
+        justifyContent: "center",
+        gridTemplateColumns: "repeat(auto-fit, minmax(240px, 340px))",
+      }}
+    >
+    
+      <div>
+        <img src={TravellingNews} alt="Destination news" />
+      </div>
+      <div style={{ textAlign: "left"}}>
+        <h3 style={{ color: COLORS.black }}>Destination Report</h3>
+        <p>
+          Connect with current travellers or locals around the place. Get real-time situation report. Be better prepared. 
+        </p>
+      </div>      
+    </content>
     
   </div>
 )

@@ -8,7 +8,8 @@ export const COLORS = {
   amber: "#FF6F00",
   amberLight: "#FF8F00",
   redLighten3: "#F4511E",
-  red: "#BF360C"
+  red: "#BF360C",
+  black: "#000000"
 }
 
 export const GRADIENT = `linear-gradient(to top right, ${COLORS.redLighten3}, ${

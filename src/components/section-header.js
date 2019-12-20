@@ -4,9 +4,13 @@ import { COLORS } from "../styles/constants"
 
 const SectionHeader = ({ title, description }) => (
   <>
-    <div style={{ padding: "0 0 100px 0" }}>
+    <div style={{ 
+      display: "flex",
+      alignItems: "center",
+      flexDirection: "column",
+    }}>
       <h2>{title}</h2>
-      <p style={{ color: COLORS.redLighten3 }}>{description}</p>
+      <p style={{ color: COLORS.grey, textAlign: "left", maxWidth: 600 }}>{description}</p>
     </div>
   </>
 )

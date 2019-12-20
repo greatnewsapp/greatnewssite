@@ -22,11 +22,13 @@ const Footer = ({ siteTitle }) => (
     >
       <div style={{ color: COLORS.blue, fontWeight: 700 }}>
         <a
-          style={{ textDecoration: "none" }}
-          href="https://greatnews.app"
+          style={{ textDecoration: "none", color: COLORS.red }}
+          href="mailto:greatnewsappteam@gmail.com?Subject=I%20am%20Interested" 
+          target="_top"
         >
           Contact Us
         </a>
+        
       </div>
       <div style={{ color: COLORS.gray }}>
         © {new Date().getFullYear()}
