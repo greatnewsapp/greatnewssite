@@ -32,9 +32,9 @@ const Header = ({ siteTitle }) => (
         opacity: 0.3,
       }}
     />
-    <h1 style={{ textAlign: "center", color: COLORS.black }}>GREAT NEWS <span style={{ color: COLORS.redLighten3 }}>APP</span></h1>
-    <p style={{ textAlign: "center", maxWidth: 440 }}>
-    Beyond the noise of TV debates; get <strong>reactions</strong> of <strong>real people</strong> on the ground by location.
+    <h1 style={{ textAlign: "center", color: COLORS.mediumGray }}>GREAT NEWS <span style={{ color: COLORS.redLighten3 }}>APP</span></h1>
+    <p style={{ textAlign: "center", "font-size": "1.1rem",maxWidth: 480 }}>
+    Beyond the noise of TV debates; get <strong>first reactions</strong> of <strong>real people</strong> by location.
     </p>
     <Button>GET EARLY ACCESS</Button>
     <div style={{ display: "flex", margin: "6px"}}>
